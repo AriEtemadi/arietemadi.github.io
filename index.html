@@ -21,7 +21,7 @@
 <!-- Search Form -->
 <form id="labnol" method="get" action="https://www.google.com/search">
   <div class="speech">
-    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    <input type="text" name="q" id="transcript" placeholder="صحبت کنید..." />
     <img onclick="startDictation()" src="https://i.imgur.com/cHidSVu.gif" />
   </div>
 </form>
@@ -41,7 +41,7 @@
       recognition.onresult = function (e) {
         document.getElementById('transcript').value = e.results[0][0].transcript;
         recognition.stop();
-        document.getElementById('labnol').submit();
+        // document.getElementById('labnol').submit();
       };
 
       recognition.onerror = function (e) {
